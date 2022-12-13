@@ -17,6 +17,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   background: var(--secondary);
+  height: 200vh;
 }
 section {
   max-width: 90vw;
@@ -35,6 +36,21 @@ a {
 a:hover {
   color: var(--primary);
   border-color: var(--primary);
+}
+
+input {
+  display: inline-block;
+  padding: 1em;
+  background: var(--secondary);
+  color: var(--highlight-primary);
+  border: var(--line) solid var(--highlight-primary);
+  border-radius: var(--pill);
+  font-weight: normal;
+  text-decoration: none;
+}
+
+input::placeholder {
+  color: var(--highlight-secondary);
 }
 
 /* UI Event Classes */
@@ -196,28 +212,49 @@ a:nth-of-type(5) {
   }
 }
 
-/* addEventListener( MOUSEDOWN ) function */
+/* addEventListener( KEYDOWN ) function */
 
-a:nth-of-type(6) {
+input {
+  position: relative;
+}
+
+.wiggle {
+  animation-name: wiggle;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+  transform: scale(1, .1);
+
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(1deg)
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+/* addEventListener( TOUCHSTART ) function */
+
+a:nth-of-type(5) {
   position: relative;
   background: var(--highlight-secondary);
   color: var(--secondary);
   border-color: var(--secondary);
 }
 
-.small {
-  animation-name: goSmall;
-  animation-duration: .5s;
-  animation-iteration-count: 1;
-  transform: scale(1, .1);
-
+.jumper {
+  animation-name: jumper;
+  animation-duration: .15s;
+  animation-iteration-count: 4;
 }
 
-@keyframes goSmall {
+@keyframes jumper {
   0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1, .1);
+    background-color: rgb(255, 255, 255);
   }
 }

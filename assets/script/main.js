@@ -53,13 +53,24 @@ function exitHandler() {
   mouseoutInteraction.classList.toggle('nietWegGaan')
 }
 
-// addEventListener( MOUSEDOWN ) function
+// addEventListener( KEYDOWN ) function
 
-let mouseupInteraction = document.querySelector('a:nth-of-type(6)')
+let keyDownInteraction = document.querySelector('input')
 
-mouseupInteraction.addEventListener('resize', exitHandler)
-mouseupInteraction.addEventListener('animationend', exitHandler)
+keyDownInteraction.addEventListener('keydown', wiggleHandler)
+keyDownInteraction.addEventListener('animationend', wiggleHandler)
 
-function exitHandler() {
-  mouseupInteraction.classList.toggle('small')
+function wiggleHandler() {
+  keyDownInteraction.classList.toggle('wiggle')
+}
+
+// addEventListener( TOUCHSTART ) function
+
+let touchStartInteraction = document.querySelector('a:nth-of-type(6)')
+
+touchStartInteraction.addEventListener('touchstart', touchStartHandler)
+touchStartInteraction.addEventListener('animationend', touchStartHandler)
+
+function touchStartHandler() {
+  documentBody.classList.toggle('jumper')
 }
