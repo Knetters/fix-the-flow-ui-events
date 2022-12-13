@@ -17,7 +17,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   background: var(--secondary);
-  height: 200vh;
 }
 section {
   max-width: 90vw;
@@ -47,6 +46,12 @@ input {
   border-radius: var(--pill);
   font-weight: normal;
   text-decoration: none;
+  font-size: 2rem;
+  margin: 0.2em;
+  padding: 0.4em 0.8em;
+  width: 15%;
+  text-align: center;
+
 }
 
 input::placeholder {
@@ -240,7 +245,7 @@ input {
 
 /* addEventListener( TOUCHSTART ) function */
 
-a:nth-of-type(5) {
+a:nth-of-type(6) {
   position: relative;
   background: var(--highlight-secondary);
   color: var(--secondary);
@@ -249,12 +254,120 @@ a:nth-of-type(5) {
 
 .jumper {
   animation-name: jumper;
-  animation-duration: .15s;
-  animation-iteration-count: 4;
+  animation-duration: .3s;
+  animation-iteration-count: 2;
+  background-color: rgb(209, 146, 222) !important;
 }
 
 @keyframes jumper {
   0% {
-    background-color: rgb(255, 255, 255);
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(1, 1) translateY(.2rem) rotate(5deg);
+  }
+  60% {
+    transform: scale(1, 1) translateY(-1rem) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/* addEventListener( TOUCHSTART ) function */
+
+a:nth-of-type(7) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.blob {
+  animation-name: blob;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  background-color: rgb(209, 146, 222) !important;
+}
+
+@keyframes blob {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.4, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(1.6, 1) translateY(.2rem);
+  }
+  60% {
+    transform: scale(.8, 1.2) translateY(-1rem);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/* addEventListener( TOUCHSTART ) function */
+
+a:nth-of-type(8) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  background-color: rgb(225, 208, 52) !important;
+  z-index: 100;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  30% {
+    transform: scale(1.2, 1.2) translateX(10rem) rotate(5deg);
+  }
+  70% {
+    transform: scale(1.2, 1.2) translateX(10rem) rotate(5deg);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/* addEventListener( COPY ) function */
+
+.copy-input {
+  position: relative;
+  color: var(--highlight-secondary);
+}
+
+.happy {
+  animation-name: happy;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  background-color: #b5eac7 !important;
+}
+
+@keyframes happy {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  30% {
+    transform: scale(1.1, 1.1) rotate(5deg);
+  }
+  70% {
+    transform: scale(.9, .9) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
   }
 }

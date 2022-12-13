@@ -72,5 +72,38 @@ touchStartInteraction.addEventListener('touchstart', touchStartHandler)
 touchStartInteraction.addEventListener('animationend', touchStartHandler)
 
 function touchStartHandler() {
-  documentBody.classList.toggle('jumper')
+  touchStartInteraction.classList.toggle('jumper')
+}
+
+// addEventListener( TOUCHEND ) function
+
+let touchEndInteraction = document.querySelector('a:nth-of-type(7)')
+
+touchEndInteraction.addEventListener('touchend', touchEndHandler)
+touchEndInteraction.addEventListener('animationend', touchEndHandler)
+
+function touchEndHandler() {
+  touchEndInteraction.classList.toggle('blob')
+}
+
+// addEventListener( TOUCHMOVE ) function
+
+let touchMoveInteraction = document.querySelector('a:nth-of-type(8)')
+
+touchMoveInteraction.addEventListener('touchmove', touchMoveHandler)
+touchMoveInteraction.addEventListener('animationend', touchMoveHandler)
+
+function touchMoveHandler() {
+  touchMoveInteraction.classList.toggle('shake')
+}
+
+// addEventListener( COPY ) function
+
+let copyInteraction = document.querySelector('.copy-input')
+
+copyInteraction.addEventListener('copy', copyHandler)
+copyInteraction.addEventListener('animationend', copyHandler)
+
+function copyHandler() {
+  copyInteraction.classList.toggle('happy')
 }
