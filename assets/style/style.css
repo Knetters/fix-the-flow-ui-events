@@ -277,7 +277,7 @@ a:nth-of-type(6) {
   }
 }
 
-/* addEventListener( TOUCHSTART ) function */
+/* addEventListener( TOUCHEND ) function */
 
 a:nth-of-type(7) {
   position: relative;
@@ -311,7 +311,7 @@ a:nth-of-type(7) {
   }
 }
 
-/* addEventListener( TOUCHSTART ) function */
+/* addEventListener( TOUCHMOVE ) function */
 
 a:nth-of-type(8) {
   position: relative;
